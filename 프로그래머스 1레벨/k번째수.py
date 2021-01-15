@@ -21,4 +21,15 @@ def solution(array, commands):
     return answer
 
 
+# 더 간단한 방법
+def solution2(array, commands):
+    answer = []
+
+    for c in commands:
+        i, j, k = c
+        answer.append(sorted(array[i-1:j])[k-1])
+    return answer
+
+
 print(solution(array, commands))
+print(solution2(array, commands))
